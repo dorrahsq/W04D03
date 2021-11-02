@@ -22,6 +22,7 @@ const Card = () => {
     },
   ];
 
+  
   const item = newarray.find((element) => element.id == id);
   {
     console.log(item.name);
