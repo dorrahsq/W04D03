@@ -1,0 +1,14 @@
+.oneitem{
+    height: 300px;
+    width: 300px;
+    margin-left: 38%;
+    margin-top: 10%;
+    /* align-items: center;
+    text-align: center; */
+}
+
+.oneitem img{
+    height: 100%;
+    width: 100%; 
+    /* align-items: center; */
+}
