@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Home } from './components/home';
 import { Nav } from './components/nav';
-import { Route } from 'react-router';
+import { Route, Switch } from 'react-router';
 import { About } from './components/about';
 import Card from './components/card';
 import  Cards  from './components/Cards';
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
 <Nav/>    
-
+<Switch>
 <Route exact path="/" component={Home}/>
 <Route exact path="/About" component={About}/>
 <Route exact path="/Card/:id" component={Card}/>
@@ -23,8 +23,13 @@ function App() {
 <Route exact path="/Contact" component={Contact}/>
 <Route exact path="/Favorite" component={Favorite}/>
 <Route exact path="/Search" component={Search}/>
-
+<Route path="*" 
+render={()=>{
+  return <h2>error - page not found</h2>
+}}/>
+</Switch>
     </div>
+
   );
 }
 
